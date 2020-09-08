@@ -1,0 +1,27 @@
+#Ruby
+
+Ruby is a high-level, general-purpose programming language influenced by earlier languages such as Perl, Smalltalk and Ada. As part of its design, Ruby is somewhat fluid in that it utilizes aspects of both functional and structural programming, although it is primarily a structural, object-oriented language. The original implementation of Ruby uses an interpreter called YARV (Yet Another Ruby VM), although there are other implementations of Ruby that do this differently. 
+
+#History
+
+Ruby began in February 1993 when Yukihiro Mastumoto decided to make the programming language that suited his needs. He took the features he loved from existing languages like Perl and focused on usability. In describing his goal in the creation of Ruby, he said that he was "trying to make Ruby natural, not simple".
+
+The language was publicly released in 1995 and multiple implementations have been released since, including JRuby, mruby and Cardinal. 
+
+#Useage
+
+Although Ruby is general purpose, one of its best known projects is Ruby on Rails, which is a popular web framework. The Metasploit, which is used in penetration testing and cybersecurity, also uses Ruby, and Sass, a CSS extension language, began its roots with Ruby. 
+
+On Github, Ruby on Rails is the highest starred project, followed by Jekyll, a static site generator, and then Discourse, a community forum platform. 
+
+#Resources
+
+To learn Ruby this semester I will primarily use the Ruby documentation (https://www.ruby-lang.org/en/documentation/), although I also have access to tutorials on learning sites such as Udemy, and community forums such as Stackoverflow. Ruby Books also has a collection of free text sources for learning Ruby (https://rubybooks.github.io/). 
+
+#Sources
+
+Github https://github.com/search?l=Ruby&o=desc&q=ruby&s=stars&type=Repositories Accessed Sept. 8, 2020.
+mixandgo.com https://mixandgo.com/learn/what-is-ruby-used-for Accessed Sept. 8, 2020.
+ruby-doc.org https://ruby-doc.org/docs/ruby-doc-bundle/FAQ/FAQ.html Accessed Sept. 8, 2020.
+ruby-lang.org https://www.ruby-lang.org/en/about/ Accessed Sept. 8, 2020.
+Wikipedia https://en.wikipedia.org/wiki/Ruby_(programming_language) Accessed Sept. 8, 2020.
