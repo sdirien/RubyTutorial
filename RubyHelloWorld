@@ -1,0 +1,45 @@
+#Ruby
+
+The following are instructions on setting your computer up to use Ruby and a brief introduction to coding in Ruby.
+
+#Installation
+
+Ruby can be installed and used on any OS, though it is best used on Linux or Mac. When installing on Windows, some users chose to use a Linux subsystem; however, for the purposes of learning the language, the simpler Windows install will work fine.
+
+For Windows:
+
+- Install RubyInstaller here >> (https://rubyinstaller.org/downloads/). Use the highlighted link (Ruby+DevKit x 64). You may/may not use the DevKit, but it's not a bad thing to have around.
+- Once the installation window pops up, accept the license and choose your install direcatory.
+- Be sure to check the MSYS2 development toolchain option when prompted.
+- When complete, check the Run ‘ridk install’ to set up MSYS2 option. This will open a command terminal.
+- You do not need to choose individual options in this segment of the install. Simply press enter when prompted (a total of twice). After the second enter, the command terminal will close. Ruby is installed!
+
+For Mac:
+
+Ruby versions 2.0 and above are included in macOS releases! However, you can install a package manager if you so desire for more advanced coding. You can install Ruby Homebrew by typing the following into your terminal: $ brew install ruby
+
+For Linux: 
+
+You can install Ruby by typing the following into a terminal: $ sudo apt install ruby-full
+Verify the installation by typing: $ruby --version
+Ruby can also be installed with package managers.
+
+#Hello-World: Your First Program
+
+Ruby as an open source language can be written in many environments. You can use a text editor or an IDE. I used Atom, and ran the program using the terminal. 
+
+Ruby's simplistic writing style is evidenced when writing a simple Hello-World file. To begin, create a file and save it as "Hello_World.rb". The .rb extension saves it as a Ruby file.
+
+You do not need boilerplate for Ruby. Simply type the following: puts "Hello world!"
+
+Puts is the equivalent of "print" or "println". The outputted string must still be surrounded by quotation marks.
+
+Save your file, and then open a terminal. You can run your code by typing the following, and pressing enter: ruby Hello_World.rb
+
+You can create a comment in a Ruby file by starting the comment line with a pound symbol (#).
+
+#Sources
+ 
+Learn.co https://learn.co/lessons/hello-world-ruby Accessed September 14, 2020.
+Linuxize.com https://linuxize.com/post/how-to-install-ruby-on-ubuntu-18-04/ Accessed September 14, 2020.
+Ruby-lang.org https://www.ruby-lang.org/en/documentation/installation/#homebrew Accessed September 14, 2020.
