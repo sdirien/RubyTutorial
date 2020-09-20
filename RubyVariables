@@ -1,0 +1,58 @@
+#Naming Conventions
+
+Like many programming languages, Ruby has a few naming conventions used to help differentiate variable types and methods. As with most languages, Ruby also has reserved words that should not be used as variable/method names; a list can be found here: https://www.marcelofossrj.com/guide/2017/07/15/ruby-naming.html#:~:text=A%20digit%20means%20%E2%80%9C0%E2%80%9D%20through,multiword%20method%20or%20variable%20name.
+
+The general rules for naming variables/methods in Ruby are as follows:
+
+- local variables begin with an underscore or a lowercase letter (ex. "_cat" or "cat")
+- global variables begin with a dollar sign ($) and can be followed by underscores, dashes, or other characters, although some global variables are predefined, such as $_ (ex. "$cat")
+- instance variables begin with the at symbol (@) and are followed by letter characters or underscores (ex. "@cat")
+- class variables begin with two at symbols (@@)
+- in all the above, we follow snake casing, where each word within a name is seperated by an underscore, and the first letter of each word is lowercase (ex. "the_cat")
+- constants must begin with an uppercase letter and are generally in all caps, with individual words within a name seperated by underscores (ex. "CAT" or "THE_CAT")
+- class names and module names follow MixedCase; they begin with an uppercase letter and the first letter of any following word is also uppercase (ex. "TheCat")
+- methods should begin with an underscore, or a lowercase letter; parameters follow the same rule
+
+Although you can technically use uppercase and lowercase letters as you please, you should stick to naming conventions for readability. Additionally, you really do need symbols like the at symbol (@) or dollar sign ($) to differentiate variable types, since we aren't using a reserved word before the variable to define its type, like in Java.
+
+It's also worth noting that in Ruby, lines are not terminated with semicolons (;).
+
+#Typing
+
+Ruby is dynamically typed. This means that you can change a variable's type on the fly. However, it is also strongly-typed, which means that it expects you to follow the rules of the variable type you choose. For example, you can write:
+
+x = "3"
+x = 3
+
+But you cannot do:
+
+x = "3"
+y = x + 3
+
+However, you can convert a string to an integer in order to make this work:
+
+x = 3
+y = "3"
+z = y.to_i
+puts x+z
+
+This only works if the string contains only integers and no letters or symbols.
+
+#Type Conversions
+
+Ruby is widening. For example, if you add a float and an integer, you get a float. Similarly, if you divide a float and an int, you get a float.
+
+#Limitations
+
+There isn't a built in way to create hashes out of strings or arrays. You'll have to code that conversion yourself.
+
+
+#Sources
+
+digitalocean.com https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-ruby Accessed September 20, 2020.
+github https://github.com/rubocop-hq/ruby-style-guide Accessed September 20, 2020.
+marcelofossrj.com https://www.marcelofossrj.com/guide/2017/07/15/ruby-naming.html#:~:text=A%20digit%20means%20%E2%80%9C0%E2%80%9D%20through,multiword%20method%20or%20variable%20name. Accessed September 20, 2020.
+medium.com https://medium.com/@kmarks2013/whats-in-a-name-92578b878b4f Accessed September 20, 2020.
+rubyfleebie.com http://www.rubyfleebie.com/2007/07/09/ruby-is-dynamically-and-strongly-typed/ Accessed September 20, 2020.
+ruby-for-beginners.rubymonstas.org http://ruby-for-beginners.rubymonstas.org/built_in_classes/hashes.html Accessed September 20, 2020.
+rubylearning.com http://rubylearning.com/satishtalim/ruby_names.html Accessed September 20, 2020.
