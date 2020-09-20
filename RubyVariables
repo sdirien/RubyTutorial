@@ -46,6 +46,9 @@ Ruby is widening. For example, if you add a float and an integer, you get a floa
 
 There isn't a built in way to create hashes out of strings or arrays. You'll have to code that conversion yourself.
 
+#Examples
+
+For more examples, see data_types.rb
 
 #Sources
 
