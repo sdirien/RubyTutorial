@@ -1,0 +1,217 @@
+######Conditional Statements
+
+Ruby has the expected conditional statements of most programming languages, including if/else, if/elseif/else, if/then/else. Ruby also offers the 'unless' statement. Examples of these can be found in the accompanying control_flow.rb file.
+
+Ruby conditional statements can be made into one line with the use of the 'then' statement, or can be multi-line. Each statement must end with the 'end' statement, like so:
+
+if x > 2
+  puts "x is greater than 2"
+elsif x == 2
+  puts "x is equal to 2"
+else
+  puts "x is not greater than 2"
+end
+
+In the above example, we do not need 'then' statements because it is multi line. If we want to make our statement single line, we need to use 'then' as a delimiter:
+
+if (x == 2) then puts 'x is 2' else puts 'x is not 2' end
+
+The 'unless' statement does the opposite of the 'if/else' statement. While an 'if/else' statement will execute code only if the condition is met, an 'unless' statement will only execute code if that condition is not met. Here is an example:
+
+unless x >= 10
+  puts "x is less than 10"
+else
+  puts "x is greater than or equal to 10"
+end
+
+In this case, if x = 5, the program will print that "x is less than 10"
+
+Conditional statements in Ruby do not need parenthesis around the condition, or brackets around the code to be executed.
+
+######Short Circuit Evaluation
+
+Ruby uses short circuit evaluation. This means that when checking conditions, it will not check a second condition if the first condition is enough to evaluate the expression. For example:
+
+g = false
+
+if g && h
+  puts "Hello"
+end
+
+In this code, we have stated that 'g' is 'false', and not initialized 'h'. Then we say that if 'g' and 'h', then print 'Hello'. Because 'g' is 'false', it doesn't matter what value 'h' is, because with the logical AND (&&) both variables need to be 'true'. Therefore, the program doesn't bother evaluating the second half of the condition, and doesn't realize 'h' does not exist. No error is thrown.
+
+######Dangling Else
+
+The dangling else problem refers to the ambiguity in determining to which 'if' an 'else' belongs. For example, without indentation, it can be difficult to tell which 'if' statement the 'else' statement in this code belongs to:
+
+t = 12
+k = 16
+
+if t == 12
+if k == 16
+puts "Hullaballoo"
+end
+else
+puts "Bullahalloo"
+end
+
+However, in Ruby, each conditional terminates with an 'end' statement. 'If' and 'end' pair like brackets. Therefore, this code reads like this:
+
+if t == 12 {
+  if k == 16 {
+    puts "Hullaballoo"
+  } #Location of the first 'end'
+  else {
+    puts "Bullahalloo"
+  }
+} #Location of the last 'end'
+
+Therefore the code outputs "Hullaballoo"
+
+######Loops
+
+Ruby has multiple types of loops, including while, do-while, for, and a form of foreach. Similar to conditional statements, loops generally must end with an 'end' statement; the exception is certain foreach syntax. Brackets and paranthesis are still generally unnceeded.
+
+This is an example 'while' loop. It is useful for looping until a condition is met; in this case, 'x' being greater than or equal to 'y' will terminate the loop:
+
+while x < y
+  puts "x is less than y"
+  x = x + 1
+end
+
+And this is an example 'do-while' loop. Note that it does not include the term 'while' and instead begins with 'loop do' to express the code executed, and a 'break' statement to mark the ending condition (this substitutes the 'while'). The code beneath 'loop do' will occur until the condition following 'break' is met (in this case, x being greater than 11):
+
+loop do
+  puts "this is a do-while loop"
+  x = x + 1
+  break if x > 11
+end
+
+This is an example 'for' loop. Note that the syntax (for something in something do) is similar in functionality to a 'foreach' loop, and that it ends with 'do' to indicate the executed code. 'Do' is not required, but can help clarify where conditions end and executables begin:
+
+for a in 1..10 do
+  puts a
+end
+
+for a in 1..10 
+  puts a
+end
+
+Both 'for' loops function the same.
+
+While there is no formal 'foreach' statement, we can loop through an array in a similar fashion using 'each', like so:
+
+array = ['A', 'B', 'C']
+array.each { |x| puts x}
+
+Examples of this code can be found in the accompanying 'control_flow.rb' file.
+
+######Break and Continue
+
+Ruby utilizes 'break' statements which allow us to terminate a loop dependent on a condition. For example:
+
+for b in 0..5
+  if b == 2
+    break
+  end
+  puts b
+end
+
+In this code, we would print the numbers 0 through 5, except the added 'if' statement indicates that the loop should 'break', or terminate, if 'b' is equal to 2. So it will print the numbers 0 and 1 before terminating.
+
+It is worth noting that 'end' does not terminate a loop preemptively the way 'break' does. 'End' indicates that the executable code inside of a loop is finished, not that the loop itself is done running.
+
+Ruby also utilizes a 'next' statement which allows us to continue a loop but skip executable code until a condition is met. For example:
+
+for c in 0..5
+  if c < 3 then
+    next
+  end
+  puts c
+end
+
+In this code, we would print the numbers 0 through 5, except the added 'if' statement indicates that all the numbers less than 3 should be skipped. The code will therefore print 3, 4, and 5.
+
+######Other statements and loops
+
+Ruby additionally has an 'until' statement, which will execute code until the condition is met. For example:
+
+begin
+  puts x
+  x += 1
+end until x == 10
+
+and
+
+until x < 5 do
+  puts x
+  x -= 1
+end
+
+In the first example, we are printing 'x' until 'x' equals 10.
+
+In the second example, we are printing 'x' until 'x' is less than 5.
+
+######Case Statements
+
+A case statement, similar to a switch statement, is like a shorthand way of writing a branching 'if/elseif/else' statement. For example:
+
+case x
+when 10
+  puts "x is 10"
+when 11
+  puts "x is 11"
+else
+  puts "x is not 10 or 11"
+end
+
+is equivalent to
+
+if x == 10
+  puts "x is 10"
+elsif x == 11
+  puts "x is 11"
+else
+  puts "x is not 10 or 11"
+end
+
+The variable 'x' does not need to be stated in each conditional because we begin the statement by stating 'case x'--this means that every time we write 'when' followed by something, we are comparing 'x', the case, to that something. So for example, in the first line of the first example, we are saying 'x == 10' by writing 'when 10'.
+
+In a case statement, once a condition is found to be true, the statement terminates as though there were a 'break' coded in. For example:
+
+x = 10
+
+case x
+when 10
+  puts "x is 10"
+  x+=1
+when 11
+  puts "x is 11"
+else
+  puts "x is not 10 or 11"
+end
+
+Output: x is 10
+
+Even though the executed code indicates to add 1 to 'x', thereby making 'x' equal 11, the code terminates and does not additionally print 'x is 11'. 
+
+Case statements cannot utilize 'next' statements. For example, the following is invalid and does not work:
+
+x = 10
+
+case x
+when 10
+  next
+when 11
+  puts "x is 11"
+  x+=1
+else
+  puts "x is not 10 or 11"
+end
+
+'x+=1' will not be evaluated, because an error is thrown at 'next'.
+
+
+
+
+
