@@ -211,7 +211,11 @@ end
 
 'x+=1' will not be evaluated, because an error is thrown at 'next'.
 
+######Sources
 
-
+drdobbs.com https://www.drdobbs.com/cpp/dangling-else-yet-again/231602010 Accessed October 1, 2020.
+geeksforgeeks.com https://www.geeksforgeeks.org/ruby-case-statement/ and https://www.geeksforgeeks.org/ruby-loops-for-while-do-while-until/ Accessed October 1, 2020.
+tutorialspoint.com https://www.tutorialspoint.com/ruby/ruby_loops.htm and https://www.tutorialspoint.com/ruby/ruby_if_else.htm Accessed October 1, 2020.
+syntaxdb.com https://syntaxdb.com/ref/ruby/do-while Accessed October 1, 2020.
 
 
